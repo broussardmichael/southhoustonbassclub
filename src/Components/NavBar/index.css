@@ -1,0 +1,123 @@
+@media only screen and (max-width: 45em) {
+    .navbar-logo-img {
+        display: none;
+    }
+
+    .navbar-logo-img-mobile {
+        display: inline-block !important;
+        margin-right: 10px;
+    }
+
+    .navbar-logo-brand-mobile {
+        font-size: 1rem;
+        display: inline-block !important;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,1);
+}
+
+.navbar {
+    font-size: 1.2rem;
+}
+
+/*.navbar-nav {
+    width:100%;
+    justify-content: space-around;
+}*/
+
+/*.navbar-nav a {
+    color: black;
+}
+
+.dropdown a {
+    color: black;
+}*/
+
+.navbar-logo-img-mobile {
+    height: 50px;
+    width: 50px;
+    display: none;
+}
+
+.navbar-logo-img {
+    height: 100px;
+    width: 100px;
+}
+
+.navbar-logo-brand-mobile {
+    display: none;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+/*
+.navbar-nav .nav-item .nav-link {
+    color: red;
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: pink;
+}
+
+ul.nav a:hover { color: #fff !important; }
+
+.navbar-custom {
+    background-color: #ffffff;
+}
+
+
+change the brand and text color
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #F827F6;
+    padding: 0.8rem 1rem;
+}
+change the link color and add padding for height
+.navbar-custom .navbar-nav .nav-link {
+    color: red;
+    padding: 1rem 1rem;
+}
+change the color of active or hovered links
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+    background-color: #ee4400;
+   add background-color to active links
+
+}.navbar-custom {
+     background-color: #ff5500;}
+
+change the brand and text color
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+
+change the link color
+.navbar-custom .navbar-nav .nav-link {
+    color: red;
+}
+
+ change the color of active or hovered links
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+for dropdown only - change the color of droodown
+.navbar-custom .dropdown-menu {
+    background-color: #ff5500;
+}
+.navbar-custom .dropdown-item {
+    color: #ffffff;
+}
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+    color: #333333;
+    background-color: rgba(255,255,255,.5);
+}
+*/

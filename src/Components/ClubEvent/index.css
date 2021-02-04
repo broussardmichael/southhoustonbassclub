@@ -1,0 +1,20 @@
+.event {
+    margin:auto;
+}
+
+.event-type {
+
+}
+
+.event-date {
+
+}
+
+.event-location {
+
+}
+
+.event-value {
+    display: inline-block;
+    margin-left: 10px;
+}

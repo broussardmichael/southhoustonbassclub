@@ -1,0 +1,27 @@
+@media only screen and (max-width: 45em) {
+    .header {
+        height: 4.7rem !important;
+    }
+}
+
+.title {
+    color:white;
+    font-size: 5em;
+    text-align: center;
+}
+
+.header .row {
+    align-items: center;
+    height: 100%
+}
+
+.header {
+    font-family: Copperplate, fantasy;
+    font-size: 175%;
+    height: 7.5rem;
+    background-color: #BC986A;
+}
+
+.header-logo {
+    text-align: center;
+}

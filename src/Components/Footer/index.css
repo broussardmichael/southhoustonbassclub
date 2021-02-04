@@ -1,0 +1,25 @@
+@media only screen and (max-width: 45em) {
+    #root .footer {
+        font-size: .75rem ;
+    }
+}
+
+
+.footer.row .col div {
+    text-align: center;
+}
+
+.footer.row {
+    align-items: center;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer {
+    font-size: 1rem;
+    background-color: #343a40;
+    height: 50px;
+    color: white;
+}

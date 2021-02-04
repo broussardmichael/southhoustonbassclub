@@ -1,0 +1,26 @@
+.year-results-title {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    margin:20px;
+}
+
+.tournament-results-container {
+
+}
+
+.membership-header {
+    text-align: center;
+}
+
+.final-results {
+    padding:10px;
+}
+
+.year-results {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding:10px;
+}

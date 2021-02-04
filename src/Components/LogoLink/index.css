@@ -1,0 +1,10 @@
+@media only screen and (max-width: 45em) {
+    .logo-img {
+        display: none;
+    }
+}
+
+.logo-img {
+    width: 150px;
+    height: 150px;
+}

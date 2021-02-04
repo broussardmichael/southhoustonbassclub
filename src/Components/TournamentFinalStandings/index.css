@@ -1,0 +1,26 @@
+.fr-title {
+    font-size: large;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.fr-container {
+    text-align: center;
+    padding:20px;
+}
+
+.fr-result {
+}
+
+.fr-fisherman {
+
+}
+
+.top-six-label {
+    font-weight: bold;
+}
+
+.fr-result .row {
+    justify-content:center;
+}

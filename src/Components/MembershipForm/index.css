@@ -1,0 +1,22 @@
+.membership-form {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.membership-form div:not(.break) {
+    flex-grow: 1;
+    margin:2px;
+}
+
+.membership-form div input {
+    width: 100%;
+}
+
+#reason {
+    height: 250px;
+}
+
+.submitBtn {
+    text-align: center;
+}

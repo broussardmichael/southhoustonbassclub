@@ -1,0 +1,17 @@
+@media only screen and (max-width: 45em) {
+    .membership-row-container {
+        flex-direction: column;
+    }
+}
+
+.membership-container {
+    padding: 20px;
+}
+
+.membership-faqs-container{
+    margin:10px;
+}
+
+.membership-form-container {
+    margin:10px;
+}

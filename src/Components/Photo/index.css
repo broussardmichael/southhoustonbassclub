@@ -1,0 +1,26 @@
+.photo-container {
+    width:340px;
+    height:500px;
+}
+
+.photo {
+    display:block;
+    height: 400px;
+    width: 300px;
+    border: 1px outset #888;
+    border-radius: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo-label{
+    font-size: x-large;
+    text-align: center;
+    margin:5px;
+}
+
+.photo-description{
+    font-size: small;
+    text-align: center;
+    margin:5px;
+}

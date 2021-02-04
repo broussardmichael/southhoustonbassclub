@@ -1,0 +1,19 @@
+.club-officers {
+    margin: 5px;
+    text-align:center;
+}
+
+.officer-title {
+    margin: auto;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.officer-name {
+    margin: auto;
+}
+
+a.disabled {
+    pointer-events: none;
+    color: black;
+}

@@ -1,0 +1,32 @@
+@media only screen and (max-width: 45em) {
+    .yr-container {
+        width: 100% !important;
+    }
+}
+
+.yr-container {
+    width: 250px;
+    height: 250px;
+    border: 2px double #888;
+    margin: 5px;
+}
+
+.yr-field {
+    text-align: center;
+}
+
+.yr-field-label {
+    text-align: center;
+    font-weight: bold;
+}
+
+.yr-field-title {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.yr-title-container {
+    border-bottom: 1px solid #888;
+    margin-bottom: 5px;
+}
