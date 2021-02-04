@@ -1,0 +1,82 @@
+{
+  "2020": {
+    "first": "Tommie Payne",
+    "second": "Mike Walker",
+    "third": "Warren Mayfield",
+    "fourth": "Larry Mora",
+    "fifth": "Jim Poppenhusen",
+    "sixth": "Ed Wescott",
+    "heavyStringer": {
+      "name": "",
+      "weight": ""
+    },
+    "fishOver5lbs": {
+      "name": ["Larry Mora, Tommie Payne, Sean Johnson"],
+      "numOfFishOver": "5"
+    },
+    "bigBass": {
+      "name": "Michael Broussard",
+      "weight": "7:14 lbs"
+    }
+  },
+  "2019": {
+      "first": "Tommie Payne",
+      "second": "Mike Walker",
+      "third": "Raymond Farr",
+      "fourth": "Al Alvarado",
+      "fifth": "David Koch",
+      "sixth": "Larry Mora",
+      "heavyStringer": {
+        "name": "Tommie Payne",
+        "weight": "25.01 lbs"
+      },
+      "fishOver5lbs": {
+        "name": "Tommie Payne",
+        "numOfFishOver": "7"
+      },
+      "bigBass": {
+        "name": "Tommie Payne",
+        "weight": "9.07 lbs"
+      }
+  },
+  "2018": {
+    "first": "Tommie Payne",
+    "second": "Archester Jr.",
+    "third": "Larry Mora",
+    "fourth": "Eddie Richards",
+    "fifth": "Edward Wescott",
+    "sixth": "Warren Mayfield",
+    "heavyStringer": {
+      "name": "Tommie Payne",
+      "weight": "26.12 lbs"
+    },
+    "fishOver5lbs": {
+      "name": "Tommie Payne",
+      "numOfFishOver": "8"
+    },
+    "bigBass": {
+      "name": "Allen Hendrickson",
+      "weight": "10.02 lbs"
+    }
+  },
+  "2017": {
+    "first": "Warren Mayfield",
+    "second": "Archester Jr.",
+    "third": "Raymond Farr",
+    "fourth": "Skip Chancellor",
+    "fifth": "Mike Walker",
+    "sixth": "Bill Butera",
+    "heavyStringer": {
+      "name": "Archester Jr.",
+      "weight": "28.04 lbs"
+    },
+    "fishOver5lbs": {
+      "name": "Warren Mayfield",
+      "numOfFishOver": "8"
+    },
+    "bigBass": {
+      "name": "Jim Poppenhusen",
+      "weight": "8.13 lbs"
+    }
+  }
+}

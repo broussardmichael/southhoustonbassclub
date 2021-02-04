@@ -1,0 +1,18 @@
+[
+    {"id" : "photo1","src": "/gallery/p1.jpg", "description": "Ed Wescott", "label": "7.11 on Lake Fork"},
+    {"id" : "photo2","src": "/gallery/p2.jpg", "description": "Tommie Payne", "label": "9.14 on Lake Fork"},
+    {"id" : "photo3","src": "/gallery/p3.jpg", "description": "Tommie Payne", "label": "8.02 on Lake Fork"},
+    {"id" : "photo4","src": "/gallery/p4.png", "description": "Raymond Farr and Richard Weeks", "label": "Pair of 7lbers"},
+    {"id" : "photo5","src": "/gallery/p5.jpg", "description": "Michael Broussard", "label": "7.14 on Houston County"},
+    {"id" : "photo6","src": "/gallery/p6.jpg", "description": "Michael Broussard", "label": "8.5 on Lake Fork"},
+    {"id" : "photo7","src": "/gallery/p7.jpg", "description": "Michael Broussard", "label": "7+ on Lake Nacadoches"},
+    {"id" : "photo9","src": "/gallery/p9.jpg", "description": "Arch Hester Jr.", "label": "11 on Houston County"},
+    {"id" : "photo10","src": "/gallery/p10.png", "description": "Bill Butera", "label": "Choke Canyon"},
+    {"id" : "photo11","src": "/gallery/p11.jpg", "description": "Ed Wescott", "label": "9.4 on Houston County"},
+    {"id" : "photo12","src": "/gallery/p12.jpg", "description": "Arch Hester Jr.", "label": "7 on Toledo Bend"},
+    {"id" : "photo13","src": "/gallery/p13.jpg", "description": "Mike Walker", "label": "9.14 on Choke Canyon"},
+    {"id" : "photo14","src": "/gallery/p14.jpg", "description": "Randy Pulliam", "label": "9.01 on Choke Canyon"},
+    {"id" : "photo15","src": "/gallery/p15.jpg", "description": "Tommie Payne", "label": "Redneck gas cap"},
+    {"id" : "photo16","src": "/gallery/p16.jpg", "description": "Skip Chancellor", "label": "7 on Coleto Creek"},
+    {"id" : "photo17","src": "/gallery/p17.jpg", "description": "Tommie Payne", "label": "8.5 on Falcon Lake"}
+]

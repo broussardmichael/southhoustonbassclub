@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "question": "How much does it cost to join?",
+    "answer": "$45. This includes the first two months dues and a cool hat."
+  },
+  {
+    "id": 2,
+    "question": "How much are monthly dues?",
+    "answer": "$15 each month, usually paid during the meeting."
+  },
+  {
+    "id": 3,
+    "question": "Where and how often does the club meet?",
+    "answer": "We meet on the first Monday of each month (unless it's a holiday) at the Bass Pro Shops in Pearland, TX.  Meetings begin at 7:15 pm upstairs in the conference room behind the gun counter."
+  },
+  {
+    "id": 4,
+    "question": "Do I need a bass boat?",
+    "answer": "No. No one is left on the bank since every non-boat owner is partnered with a boat-owner. You will need your own tackle though."
+  },
+  {
+    "id": 5,
+    "question": "Does it cost money to fish each tournament?",
+    "answer": "We have a $5.00 calcutta. This pays for 1st Place and Big Bass. Participation is optional, but you must let the club know before the tournament starts."
+  },
+  {
+    "id": 6,
+    "question": "Is there a big bass pot?",
+    "answer": "Yes.  This is a monthly cumulative pot that grows month to month until the largest 8lb plus bass is caught. The Big Bass Pot is optional."
+  },
+  {
+    "id": 7,
+    "question": "Is there anything besides fishing?",
+    "answer": "Why do anything else? We also have an Awards Banquet in January that the club pays for."
+  }
+]
