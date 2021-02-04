@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require("webpack");
+const CopyPlugin = require("copy-webpack-plugin");
 
 let buildType = process.env.NODE_ENV ? process.env.NODE_ENV : 'production'
 
@@ -10,12 +11,8 @@ if (/^dev/.test(buildType)) {
 }
 
 function getClientEnvironment() {
-    let REACT_APP = /^REACT_APP_/i
     return Object
         .keys(process.env)
-        .filter(function(key) {
-            return REACT_APP.test(key)
-        })
         .reduce(function(env, key) {
             env['process.env.' + key] = JSON.stringify(process.env[key])
             return env
@@ -40,7 +37,13 @@ const plugins = [
     favicon: './public/favicon.ico'
 }),
     new webpack.DefinePlugin(getClientEnvironment()),
-    require('autoprefixer')
+require('autoprefixer'),
+    new CopyPlugin({
+        patterns: [
+            { from: "public/Data", to: "./build/Data" },
+            { from: "public/gallery", to: "./build/gallery" },
+        ],
+    }),
 ];
 
 if(buildType === 'development')

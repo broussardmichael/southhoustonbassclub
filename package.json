@@ -4,10 +4,10 @@
   "description": "South Houston Bass Club Website",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --mode=development --open 'Google Chrome'",
-    "prod": "webpack --mode production",
+    "dev": "webpack serve --mode development --open 'Google Chrome'",
+    "prod": "webpack serve --mode production --open 'Google Chrome'",
     "build": "webpack --mode production",
-    "builddev": "webpack --mode=development",
+    "builddev": "webpack --mode development",
     "test": "jest"
   },
   "author": "Michael Broussard",
@@ -15,6 +15,7 @@
   "dependencies": {
     "autoprefixer": "^10.2.3",
     "bootstrap": "^4.6.0",
+    "copy-webpack-plugin": "^7.0.0",
     "precss": "^4.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
