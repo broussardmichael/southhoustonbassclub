@@ -39,10 +39,12 @@ const plugins = [
     filename: './index.html',
     favicon: './public/favicon.ico'
 }),
-    buildType === 'development' && new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin(getClientEnvironment()),
     require('autoprefixer')
 ];
+
+if(buildType === 'development')
+    plugins.push(new webpack.HotModuleReplacementPlugin());
 
 module.exports = function () {
     return {
