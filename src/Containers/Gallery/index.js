@@ -20,7 +20,7 @@ class Gallery extends React.Component {
 
     render() {
         return <div className = "gallery-container">{this.state.gallery.map(function(imageJSON) {
-            return <Photo key = {imageJSON.id} src = {process.env.PUBLIC_URL + imageJSON.src} label = {imageJSON.label} description = {imageJSON.description}/>
+            return <Photo key = {imageJSON._id} src = {process.env.PUBLIC_URL + imageJSON.src} label = {imageJSON.label} description = {imageJSON.description}/>
         })}
         </div>
     }

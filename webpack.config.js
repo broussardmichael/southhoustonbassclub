@@ -3,55 +3,30 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require("webpack");
 const CopyPlugin = require("copy-webpack-plugin");
 
-let buildType = process.env.NODE_ENV ? process.env.NODE_ENV : 'production'
-
-// just in case we pass in NODE_DEV = dev
-if (/^dev/.test(buildType)) {
-    buildType = 'development'
-}
-
-function getClientEnvironment() {
-    return Object
-        .keys(process.env)
-        .reduce(function(env, key) {
-            env['process.env.' + key] = JSON.stringify(process.env[key])
-            return env
-        }, {
-            // whenever found in code, process.env.NODE_ENV is replaced with
-            // the actual value of process.env.NODE_ENV
-            // Useful for determining whether we’re running in production mode.
-            // Most importantly, it switches React into the correct mode.
-            'process.env.NODE_ENV': JSON.stringify(
-                process.env.NODE_ENV || 'development'
-            ),
-            'process.env.PUBLIC_URL': JSON.stringify(
-                process.env.PUBLIC_URL
-            )
-        })
-}
-
-const plugins = [
-    new HtmlWebPackPlugin({
-    template: './public/index.html',
-    filename: './index.html',
-    favicon: './public/favicon.ico'
-}),
-    new webpack.DefinePlugin(getClientEnvironment()),
-require('autoprefixer'),
-    new CopyPlugin({
-        patterns: [
-            { from: "public/Data", to: "./build/Data" },
-            { from: "public/gallery", to: "./build/gallery" },
-        ],
-    }),
-];
-
-if(buildType === 'development')
-    plugins.push(new webpack.HotModuleReplacementPlugin());
-
-module.exports = function () {
-    return {
-        mode: buildType,
+module.exports = (env, argv) => {
+    function getClientEnvironment() {
+        return Object
+            .keys(process.env)
+            .reduce(function(env, key) {
+                env['process.env.' + key] = JSON.stringify(process.env[key])
+                return env
+            }, {
+                // whenever found in code, process.env.NODE_ENV is replaced with
+                // the actual value of process.env.NODE_ENV
+                // Useful for determining whether we’re running in production mode.
+                // Most importantly, it switches React into the correct mode.
+                'process.env.NODE_ENV': JSON.stringify(
+                    process.env.NODE_ENV || 'development'
+                ),
+                'process.env.PUBLIC_URL': JSON.stringify(
+                    process.env.PUBLIC_URL
+                ),
+                'process.env.SERVER_URL': JSON.stringify(
+                    process.env.SERVER_URL
+                )
+            })
+    }
+    let config = {
         output: {
             path: path.resolve(__dirname, 'build'),
             filename: 'bundle.js',
@@ -126,10 +101,36 @@ module.exports = function () {
                 }
             ],
         },
-        plugins: plugins,
-        devServer: {
-            historyApiFallback: true,
-            hot: true
-        }
+    };
+    let buildType = process.env.NODE_ENV ? process.env.NODE_ENV : 'production'
+    if (/^dev/.test(buildType)) {
+        buildType = 'development'
     }
+
+    console.log(`Build Environment: ${buildType}`)
+
+    const plugins = [
+        new HtmlWebPackPlugin({
+            template: './public/index.html',
+            filename: './index.html',
+            favicon: './public/favicon.ico'
+        }),
+        new webpack.DefinePlugin(getClientEnvironment()),
+        require('autoprefixer'),
+        new CopyPlugin({
+            patterns: [
+                { from: "public/gallery", to: "./build/gallery" }
+            ],
+        }),
+    ];
+
+    if(buildType === 'development') {
+        config.devtool = 'source-map';
+        plugins.push(new webpack.HotModuleReplacementPlugin());
+    }
+
+    config.mode = buildType;
+    config.plugins = plugins;
+
+    return config
 };

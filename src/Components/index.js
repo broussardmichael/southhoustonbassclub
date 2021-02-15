@@ -17,6 +17,7 @@ import LogoLink from './LogoLink';
 import HomeSection from './HomeSection';
 import EventBtn from './EventBtn';
 import EventModal from "./EventModal";
+import NotFound from "./NotFound";
 
 export {
     About,
@@ -37,5 +38,6 @@ export {
     EventBtn,
     ClubOfficer,
     ClubEvent,
-    EventModal
+    EventModal,
+    NotFound
 }

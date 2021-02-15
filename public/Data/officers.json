@@ -1,8 +1,0 @@
-[
-  {"id": "1","title": "President", "name": "Carl Highfill", "email": "carl_highfill@yahoo.com\t", "canContact": true},
-  {"id": "2","title": "Vice President", "name": "Michael Broussard", "email": "michael_broussard@msn.com", "canContact": true},
-  {"id": "3","title": "Secretary", "name": "Mike Walker", "email": "hmikewalker1948@gmail.com", "canContact": true},
-  {"id": "4","title": "Treasurer", "name": "Bill Butera", "email": "captb53@aol.com", "canContact": true},
-  {"id": "5","title": "Tournament Director", "name": "Skip Chancellor", "email": "schancellor@faustdistributing.com", "canContact": true},
-  {"id": "6","title": "Board Of Directors", "name": ["Jim Poppenhusen", "Larry Mora", "Paul Hopkins"], "canContact": false}
-]

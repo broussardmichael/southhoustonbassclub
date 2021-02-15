@@ -6,6 +6,6 @@
 
 }
 
-.home-eve.event-btn {
-    border: 2px outset black;
+.home-item-container .event-btn {
+    border: 1px outset black;
 }

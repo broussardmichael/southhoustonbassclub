@@ -1,16 +1,32 @@
+import axios from 'axios';
+
+const instance = axios.create({
+    baseURL: process.env.SERVER_URL
+});
+
+const errorHandler = (error) => {
+    if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+    } else if (error.request) {
+        // The request was made but no response was received
+        // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+        // http.ClientRequest in node.js
+        console.log(error.request);
+    } else {
+        // Something happened in setting up the request that triggered an Error
+        console.log('Error', error.message);
+    }
+    console.log(error.config);
+    throw new Error(`${getClubInformationAction.type} Error. Error: ${error.response}`);
+}
+
 const getClubInformationAction = {
     type: 'home/getClubInformation',
-    payload : ''
-}
-
-const getClubOfficersAction = {
-    type: 'home/getClubOfficers',
-    payload : []
-}
-
-const getClubEventsAction = {
-    type: 'home/getClubEvents',
-    payload : []
+    payload : {info: '', events: '', officers: ''}
 }
 
 const getFaqsAction = {
@@ -28,114 +44,47 @@ const getTournamentResultsAction = {
     payload : []
 }
 
-const getTournamentFinalResultsAction = {
-    type: 'tournamentResults/getTournamentFinalResults',
-    payload : []
-}
-
 const getClubInformation = async () => {
-    let response = await fetch(`${process.env.PUBLIC_URL}/Data/clubinformation.json`, {
-        headers : {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    });
-    if (!response.ok) {
-        throw new Error(`${getClubInformationAction.type} Error. status: ${response.status}`);
-    } else {
-        getClubInformationAction.payload = await response.json();
+    try {
+        let response = await instance.get('/');
+        getClubInformationAction.payload = response.data;
         return getClubInformationAction;
-    }
-}
-
-const getClubOfficers = async () => {
-    let response = await fetch(`${process.env.PUBLIC_URL}/Data/officers.json`, {
-        headers : {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    });
-    if (!response.ok) {
-        throw new Error(`${getClubOfficersAction.type} Error. status: ${response.status}`);
-    } else {
-        getClubOfficersAction.payload = await response.json();
-        return getClubOfficersAction;
-    }
-}
-
-const getClubEvents = async () => {
-    let response = await fetch(`${process.env.PUBLIC_URL}/Data/events.json`, {
-        headers : {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    });
-    if (!response.ok) {
-        throw new Error(`${getClubEventsAction.type} Error. status: ${response.status}`);
-    } else {
-        getClubEventsAction.payload = await response.json();
-        return getClubEventsAction;
+    } catch (error) {
+        errorHandler(error);
     }
 }
 
 const getFaqs = async () => {
-    let response = await fetch(`${process.env.PUBLIC_URL}/Data/faqs.json`, {
-        headers : {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    });
-    if (!response.ok) {
-        throw new Error(`${getFaqsAction.type} Error. status: ${response.status}`);
-    } else {
-        getFaqsAction.payload = await response.json();
+    try {
+        let response = await instance.get('/Membership');
+        getFaqsAction.payload = response.data;
         return getFaqsAction;
+    } catch (error) {
+        errorHandler(error);
     }
 }
 
 const getPhotos = async () => {
-    let response = await fetch(`${process.env.PUBLIC_URL}/Data/gallery.json`, {
-        headers : {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    });
-    if (!response.ok) {
-        throw new Error(`${getGalleryPhotosAction.type} Error. status: ${response.status}`);
-    } else {
-        getGalleryPhotosAction.payload = await response.json();
+    try {
+        let response = await instance.get('/Gallery');
+        getGalleryPhotosAction.payload = response.data;
         return getGalleryPhotosAction;
+    } catch (error) {
+        errorHandler(error);
     }
 }
 
-const getTournamentResults = async () => {
-    let response = await fetch(`${process.env.PUBLIC_URL}/Data/results.json`, {
-        headers : {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    });
-    if (!response.ok) {
-        throw new Error(`${getTournamentResultsAction.type} Error. status: ${response.status}`);
-    } else {
-        getTournamentResultsAction.payload = await response.json();
+const getTournamentResults = async (selectedYear) => {
+    try {
+        if(!selectedYear)
+            selectedYear = new Date().getFullYear();
+
+        let response = await instance.get(`/TournamentResults/${selectedYear}`);
+        getTournamentResultsAction.payload = response.data;
         return getTournamentResultsAction;
+    } catch (error) {
+        errorHandler(error);
     }
 }
 
-const getTournamentFinalResults = async () => {
-    let response = await fetch(`${process.env.PUBLIC_URL}/Data/finalStandings.json`, {
-        headers : {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    });
-    if (!response.ok) {
-        throw new Error(`${getTournamentFinalResultsAction.type} Error. status: ${response.status}`);
-    } else {
-        getTournamentFinalResultsAction.payload = await response.json();
-        return getTournamentFinalResultsAction;
-    }
-}
-
-export {getClubInformation, getClubOfficers, getClubEvents, getFaqs, getPhotos, getTournamentResults, getTournamentFinalResults}
+export {getClubInformation, getFaqs, getPhotos, getTournamentResults}
