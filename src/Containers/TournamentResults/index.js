@@ -19,7 +19,7 @@ class TournamentResults extends React.Component {
             if (getTournamentResultsAction.type === "tournamentResults/getTournamentResults")
                 this.setState({
                     results: getTournamentResultsAction.payload.results,
-                    finalStandings: getTournamentResultsAction.payload.finalStandings
+                    finalStandings: getTournamentResultsAction.payload.finalStandings.length ? getTournamentResultsAction.payload.finalStandings[0] : {}
                 });
         }).catch((error)=>{
             console.log(error);
@@ -33,7 +33,7 @@ class TournamentResults extends React.Component {
                     this.setState({
                         selectedYear: this.props.match.params.selectedYear,
                         results: getTournamentResultsAction.payload.results,
-                        finalStandings: getTournamentResultsAction.payload.finalStandings
+                        finalStandings: getTournamentResultsAction.payload.finalStandings.length ? getTournamentResultsAction.payload.finalStandings[0] : {}
                     });
             }).catch((error)=>{
                 console.log(error);

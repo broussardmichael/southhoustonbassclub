@@ -6,14 +6,14 @@ const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric
 
 const EventBtn = ({event, active, showHandler}) => {
     return <Button className = "event-btn" variant={active ? 'success' : ''} onClick = {() => showHandler(event)} size="lg" block>
-        <span className = "btn-name">{event.eventType === "meeting" ? "Meeting: " : "Tournament: "}</span>
+        <span className = "btn-name">{event.type === "meeting" ? "Meeting: " : "Tournament: "}</span>
         <span className = "btn-date">{active ? 'Happening Now' : new Date(event.date).toLocaleDateString(undefined, options)}</span>
     </Button>
 };
 
 EventBtn.defaultProps = {
     event: {
-        eventType: '',
+        type: '',
         date: '',
         location: '',
         lake: '',
@@ -28,7 +28,7 @@ EventBtn.propTypes = {
     showHandler: PropTypes.func,
     active: PropTypes.bool,
     event: PropTypes.shape({
-        eventType: PropTypes.string,
+        type: PropTypes.string,
         date: PropTypes.string,
         location: PropTypes.string,
         lake: PropTypes.string,

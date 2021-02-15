@@ -9,7 +9,7 @@ class Home extends React.Component {
         this.state = {
             show: false,
             selectedEvent: {},
-            info: "",
+            clubinfo: "",
             officers: [],
             events: []
         }
@@ -29,7 +29,7 @@ class Home extends React.Component {
         getClubInformation().then((clubInformation) => {
             if (clubInformation.type === "home/getClubInformation")
                 this.setState({
-                    info: clubInformation.payload.homepage,
+                    clubinfo: clubInformation.payload.info.length ? clubInformation.payload.info[0] : "",
                     events: clubInformation.payload.events,
                     officers: clubInformation.payload.officers
                 });
@@ -38,13 +38,12 @@ class Home extends React.Component {
         });
     }
 
-    render()
-    {
+    render() {
         return <React.Fragment>
             <Row className='home-row-container'>
                 <Col>
                     <HomeSection header='South Houston Bass Club'>
-                        <About clubinformation={this.state.info}/>
+                        <About clubinformation={this.state.clubinfo.info}/>
                     </HomeSection>
                 </Col>
                 <Col>
@@ -55,9 +54,9 @@ class Home extends React.Component {
                             let startDate = new Date(event.date);
                             let endDate = new Date(event.endDate);
 
-                            if (event.eventType === 'meeting') {
+                            if (event.type === 'meeting') {
                                 return <EventBtn key={event._id} event={event} showHandler={this.handleOpenModal}/>;
-                            } else if (event.eventType === 'tournament') {
+                            } else if (event.type === 'tournament') {
                                 return <EventBtn key={event._id} active={(startDate < currentDate && currentDate < endDate)}
                                                  event={event} showHandler={this.handleOpenModal}/>;
                             }
