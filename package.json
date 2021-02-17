@@ -17,6 +17,8 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "copy-webpack-plugin": "^7.0.0",
+    "jquery": "^3.5.1",
+    "popper": "^1.0.1",
     "precss": "^4.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",

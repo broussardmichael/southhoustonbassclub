@@ -16,10 +16,10 @@ module.exports = (env, argv) => {
                 // Useful for determining whether we’re running in production mode.
                 // Most importantly, it switches React into the correct mode.
                 'process.env.NODE_ENV': JSON.stringify(
-                    process.env.NODE_ENV || 'development'
+                    process.env.NODE_ENV || 'production'
                 ),
                 'process.env.PUBLIC_URL': JSON.stringify(
-                    process.env.PUBLIC_URL
+                    process.env.PUBLIC_URL || path.resolve(__dirname, 'public')
                 ),
                 'process.env.SERVER_URL': JSON.stringify(
                     process.env.SERVER_URL
