@@ -5,7 +5,7 @@ import {Button} from "react-bootstrap";
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
 const EventBtn = ({event, active, showHandler}) => {
-    return <Button className = "event-btn" variant={active ? 'success' : ''} onClick = {() => showHandler(event)} size="lg" block>
+    return <Button className = "event-btn" variant={active ? 'success' : 'primary'} onClick = {() => showHandler(event)} size="lg" block>
         <span className = "btn-name">{event.type === "meeting" ? "Meeting: " : "Tournament: "}</span>
         <span className = "btn-date">{active ? 'Happening Now' : new Date(event.date).toLocaleDateString(undefined, options)}</span>
     </Button>

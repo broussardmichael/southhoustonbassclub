@@ -3,3 +3,7 @@
     overflow: auto;
     padding: 10px;
 }
+
+.content.row > .col {
+    margin: auto;
+}
