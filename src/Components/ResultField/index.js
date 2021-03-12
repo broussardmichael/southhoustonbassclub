@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const ResultField = ({name, value}) => {
     return <div className="result-field-container">
-        <div className="rf-field"><span>{name} - </span><span>{value}</span></div>
+        <div className="result-field"><span>{name} - </span><span>{value}</span></div>
     </div>;
 }
 

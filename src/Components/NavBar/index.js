@@ -38,6 +38,12 @@ const NavBar = () => {
                     <LinkContainer to="/TournamentResults/2017">
                         <NavDropdown.Item>2017</NavDropdown.Item>
                     </LinkContainer>
+                    <LinkContainer to="/TournamentResults/2016">
+                        <NavDropdown.Item>2016</NavDropdown.Item>
+                    </LinkContainer>
+                    <LinkContainer to="/TournamentResults/2015">
+                        <NavDropdown.Item>2015</NavDropdown.Item>
+                    </LinkContainer>
                 </NavDropdown>
                 <LinkContainer to="/Gallery">
                     <Nav.Link className="link">Photo Gallery</Nav.Link>

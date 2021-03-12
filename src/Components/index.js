@@ -12,7 +12,6 @@ import NavBar from './NavBar';
 import TournamentFinalStandings from './TournamentFinalStandings';
 import ResultField from './ResultField';
 import Footer from './Footer';
-import Dropdown from './Dropdown';
 import LogoLink from './LogoLink';
 import HomeSection from './HomeSection';
 import EventBtn from './EventBtn';
@@ -32,7 +31,6 @@ export {
     ResultField,
     FAQ,
     Footer,
-    Dropdown,
     LogoLink,
     HomeSection,
     EventBtn,
